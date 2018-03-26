@@ -358,6 +358,9 @@ img#gaumart{
     height: 50% !important;
     margin-top:5em;
 }
+img#husky{
+    height: 500% !important;
+}
 
 footer {
     padding: 20px;
