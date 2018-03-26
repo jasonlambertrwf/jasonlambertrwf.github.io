@@ -336,6 +336,11 @@ article#main-col {
     font-weight: bold;
 }
 
+p#caption{
+    text-align: center;
+    font-size:1.2em;
+    font-weight: bold;
+}
 .card{
     height: 100%;
     overflow: hidden;
