@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Mon CV en ligne">
+    <meta name="keywords" content="HTML,CSS,CV">
+    <meta name="author" content="Jason Lambert">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <header class="nav-fix">
+        <div class="container-flex">
+            <div id="titre">
+                <h1><span class="highlight">CV</span> Lambert Jason</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a class="js-scrollTo" href="#showcase">Accueil</a></li>
+                    <li><a class="js-scrollTo" href="#about">à propos de moi</a></li>
+                    <li><a class="js-scrollTo" href="#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <div id="index">
+                <h1>Développeur web junior</h1>
+                <p>Recherche de stage dans le cadre de la formation RWF (Rural Web Factory) by Simplon</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="main">
+        <div class="container">
+            <div id="about">
+                <article id="main-col">
+                    <h1 class="page-title">À propos de moi</h1>
+                    <p>Etant passionné et intéréssé par l'informatique depuis toujours, et après avoir travaillé dans divers métiers, il m'est paru naturel de tenter ma chance dans le monde du numérique et donc dans le développement web. Après avoir fait plusieurs stages en entreprise et regardé de plus près ce qu'est le monde du développement web j'ai donc décidé de tenter ma chance dans une formation allant dans ce sens.
+                    </p>
+                    <p class="dark">Je recherche donc actuellement un stage pour la période du : 23 Avril au 15 Juin 2018 en tant que développeur web, que je dois effectuer au cours de ma formation. J'ai comme objectif, bien sur, de trouver un emploi dans ce domaine qui me passionne de plus en plus ou alors de tenter d'appronfondir encore un peu plus ma formation en effectuant une licence en alternance.
+                    </p>
+                </article>
+
+                <aside id="sidebar">
+                    <div class="dark">
+                        <h3>Infos</h3>
+                        <p>Email: jason.clement.lambert@gmail.com</p>
+                        <p>Tel: 06.79.23.36.51</p>
+                        <p>Adresse: Angoulème, France</p>
+                        <p>Né le : 06/03/1989 </p>
+                        <a href="assets/DL/cv/CV-Jason-Lambert.pdf" download="CV_Lambert_Jason" target="_blank"><button class="button_1">
+Cliquer pour télécharger mon CV</button></a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section id="boxes">
+        <div class="container">
+            <fieldset>
+                <legend>Langages/frameworks</legend>
+                <div class="box">
+                    <img src="assets/img/logo_html.png">
+                    <h3>HTML5</h3>
+                    <div class="meter">
+                        <span id="sup" style="width:90%"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/logo_css.png">
+                    <h3>CSS3</h3>
+                    <div class="meter">
+                        <span id="mid" style="width:75%"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/logo_js.png">
+                    <h3>JavaScript</h3>
+                    <div class="meter">
+                        <span id="inf" style="width:40%"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/logo_jquery.png">
+                    <h3>JQuery</h3>
+                    <div class="meter">
+                        <span id="inf" style="width:40%"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/logo_php.png">
+                    <h3>PHP</h3>
+                    <div class="meter">
+                        <span id="sup" style="width:90%"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/logo_mysql.png">
+                    <h3>MYSQL</h3>
+                    <div class="meter">
+                        <span id="sup" style="width:90%"></span>
+                        <p></p>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+    <section id="main">
+       <!-- PORTFOLIO -->
+		<div class="block">
+			<div class="container" id="portfolio">
+				<h2 class="heading-site" id="works">Mes travaux</h2>
+				<hr>
+				<div class="columns">
+					<div class="column">
+						<div class="card">
+  <div class="card-image">
+    <figure class="image is-1by1">
+      <img src="assets/img/Projet-Poltrot.png" onclick="onClick(this)" alt="Projet Poltrot">
+    </figure>
+  </div></div>
+					</div>
+					<div class="column">
+						<div class="card">
+  <div class="card-image">
+    <figure class="image is-1by1">
+      <img src="assets/img/Projet-Loison.png" onclick="onClick(this)" id="loison" alt="Projet Loison - Base de Loisir">
+    </figure>
+  </div></div>
+					</div>
+					<div class="column">
+						<div class="card">
+  <div class="card-image">
+    <figure class="image is-1by1">
+      <img src="assets/img/ruralwb.PNG" onclick="onClick(this)" alt="Projet Rural Web Factory WebSite">
+    </figure>
+  </div></div>
+					</div>
+				</div>
+
+				<div class="columns">
+					<div class="column">
+						<div class="card">
+  <div class="card-image">
+    <figure class="image is-1by1">
+      <img src="assets/img/Projet-Videotheque-Full-Ajax.png" onclick="onClick(this)" id="ajax" alt="Admin Panel / AJAX">
+    </figure>
+  </div></div>
+					</div>
+					<div class="column">
+						<div class="card">
+  <div class="card-image">
+    <figure class="image is-1by1">
+      <img src="assets/img/husky.PNG" onclick="onClick(this)" alt="Projet parallax">
+    </figure>
+  </div></div>
+					</div>
+					<div class="column">
+						<div class="card">
+  <div class="card-image">
+    <figure class="image is-1by1">
+      <img src="assets/img/gaumart.PNG" onclick="onClick(this)" id="gaumart" alt="Projet Site vitrine">
+    </figure>
+  </div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Modal pour images en taille réelle au clic -->
+<div id="modal01" class="modal black" onclick="this.style.display='none'">
+  <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="modal-content animate-zoom center transparent padding-64">
+    <img id="img01" class="image">
+    <p id="caption" class="opacity large"></p>
+  </div>
+</div>
+
+<!-- FIN PORTFOLIO -->
+    </section>
+    <footer>
+        <p>RWF, Jason Lambert &copy; 2018</p>
+    </footer>
+    
+
+</body>
+
+</html>
