@@ -337,29 +337,29 @@ article#main-col {
 }
 
 .card{
-    height: 100% !important;
+    height: 100%;
     overflow: hidden;
 }
 
 .image img{
-    height:100% !important;
+    cursor: pointer;
 }
 
 img#loison{
     width:80%;
-    height: 200% !important;
+    height: 200% ;
     margin:0 auto;
 }
 
 img#ajax{
-    height: 250% !important;
+    height: 250%;
 }
 img#gaumart{
-    height: 50% !important;
+    height: 50%;
     margin-top:5em;
 }
 img#husky{
-    height: 500% !important;
+    height: 500%;
 }
 
 footer {
