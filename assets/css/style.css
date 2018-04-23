@@ -1,468 +1,709 @@
-*{
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
-body {
-    font: 15px/1.5 Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 0;
-    background-color: #f4f4f4;
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Indie+Flower|Roboto|Poppins|Libre+Baskerville');
+
+
+body{
+    color:#555F61;
 }
 
 
-/* Global */
-
-.container {
-    width: 80%;
-    margin: 0 auto 50px auto;
-    overflow: hidden;
+.navbar{
+    z-index:9999;
+    transition: all 0.3s ease-out;
+    font-size:.8em !important;
 }
 
-.container-flex {
-    width: 80%;
-    margin: 0 auto 0 auto;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.header-main > .row{
+    margin:0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+.header-main #logo img{
+    width:50%;
 }
 
-.button_1 {
-    height: 38px;
-    background: #08D9D6;
-    border: 0;
-    display: block;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #ffffff;
-    cursor: pointer;
+.header-main #slogan{
+    font-size:2rem;
 }
 
-.button_1:hover{
-    position:relative;
-    top:1px;
+
+.affix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
-a {
-    text-decoration: none;
-    -webkit-text-decoration-color: none;
-    text-decoration-color: none;
+/* fixed to top styles */
+.affix.navbar {
+  background-color: rgba(255,255,255,1);
+    border-bottom:1px solid red;
+  }
+.affix.navbar .nav-item>a, 
+.affix.navbar .navbar-brand {
+    color: ;
+}
+ 
+.dropdown .nav-link::after{
+      font-weight: 900;
+        font-family: Font Awesome\ 5 Free;
+  content: "\00a0\00a0 \f150";
+    }
+
+
+
+@media (min-width: 768px) { 
+.navbar-custom .dropdown:hover>.dropdown-menu {
+  display: block;
 }
 
-.dark {
-    padding: 15px;
-    background: #35424a;
-    color: #ffffff;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.navbar-custom {
+    background-color: white ;
+    font-size:.9rem;
+    font-family: Roboto;
+    
+}
+.navbar-custom .dropdown-menu {
+    margin-top:-3px;
+    font-size:.85rem;
+    font-family: Roboto;
 }
 
-.dark h3 {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.dark p,
-.dark a {
-    margin-bottom: 16px;
-}
-
-.dark a:hover{
-    cursor: default;
-}
-
-/* Header **/
-
-header {
-    background: #252A34;
-    color: #ffffff;
-    padding-top: 30px;
-    height: 100px;
-    font-size: 1em;
-    border-bottom: #08D9D6 3px solid;
-    position: fixed;
-    width: 100%;
-    z-index: 5;
-}
-
-header a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-header li {
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-header #titre {
-    font-size: 1.5em;
-}
-
-header #titre h1 {
-    margin: 0;
-    font-size: 1.1em;
-
-}
-
-header .highlight,
-header .current a {
-    color: #08D9D6;
-    font-weight: bold;
-}
-
-header a:hover {
-    color: #EAEAEA;
-    font-weight: bold;
-}
-
-/* Navbar */
-
-.nav-top {
-    top: 0;
-    height: 50px;
-    padding-top: 0;
-    opacity: 1;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.nav-top #titre {
-    margin-top: 10px;
-}
-
-.nav-top nav {
-    margin-top: 15px;
-}
-
-.nav-up {
-    top: -10em;
-    opacity:0;
-}
-
-/* Showcase */
-
-#showcase {
-    min-height: 400px;
-    margin-bottom: 2em;
-    background: url('../img/ban2.jpg') repeat-x 0 -200px;
-    text-align: center;
-    color: #ffffff;
-}
-
-#showcase h1 {
-    margin-top: 3em;
-    font-size: 55px;
-    margin-bottom: 10px;
-}
-
-#showcase p {
-    font-size: 20px;
-}
-
-#index {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-/* Main Description */
-
-.page-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-
-/* Boxes */
-
-fieldset {
-    border: 2px solid #08D9D6;
-    border-radius: 8px;
-    padding: 20px;
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: #333333;
     
 }
 
-legend {
-    padding: 0 10px;
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(0,0,0,.7);
 }
 
-div.meter {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 10px;
-    border: 1px solid #b0b0b0;
-    margin-top: 10px;
-    /* viewing purposes */
-    /*margin-left: 55px;*/
-    /* viewing purposes */
-    -webkit-box-shadow: inset 0 3px 5px 0 #d3d0d0;
-    box-shadow: inset 0 3px 5px 0 #d3d0d0;
-    border-radius: 3px;
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: black;
 }
+ }
 
-div.meter span {
-    display: inherit;
-    height: 100%;
-    animation: grower 1s linear;
-    -moz-animation: grower 1s linear;
-    -webkit-animation: grower 1s linear;
-    -o-animation: grower 1s linear;
-    position: relative;
-    top: -1px;
-    left: -1px;
-    border-radius: 3px;
-    -webkit-box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
-    border: 1px solid #3c84ad;
-}
-
-#sup {
-    background: #00cc00;
-    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
-    background-size: 45px 45px;
-}
-
-#mid {
-    background: #6eb2d1;
-    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
-    background-size: 45px 45px;
-}
-
-#inf {
-    background: #ffa500;
-    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
-    background-size: 45px 45px;
-}
-
-div.meter span:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 50%;
-    position: relative;
-    top: 50%;
-    background: rgba(0, 0, 0, 0.03);
-}
-
-div.meter p {
-    position: absolute;
-    top: 0;
-    margin: 0 10px;
-    line-height: 25px;
-    font-family: 'Helvetica';
-    font-weight: bold;
-    -webkit-font-smoothing: antialised;
-    font-size: 15px;
-    color: #333;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.6);
-}
-
-@keyframes grower {
-    0% {
-        width: 0%;
+@media (max-width: 767px) {
+    
+    .navbar-toggler{
+        min-height:50px;    
+        min-width:50px;    
     }
+    
+    .navbar-toggler-icon {
+    width:25px;    
 }
-
-@-webkit-keyframes grower {
-    0% {
-        width: 0%;
-    }
-}
-
-#boxes {
-    margin-top: 20px;
-}
-
-#boxes .box {
-    float: left;
-    text-align: center;
-    width: 30%;
-    padding: 10px;
-    margin:0 10px 10px 10px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: none;
-}
-
-#boxes .box img {
-    width: 90px;
-}
-
-
-/* Sidebar */
-
-aside#sidebar {
-    float: right;
-    width: 30%;
-    margin-top: 10px;
-}
-
-/* Main-col */
-
-article#main-col {
-    float: left;
-    width: 65%;
-}
-
-/* Portfolio */
-
-#works {
-    text-align: center;
-    font-size:1.2em;
-    font-weight: bold;
-}
-
-p#caption{
-    text-align: center;
-    font-size:1.2em;
-    font-weight: bold;
-}
-.card{
-    height: 100%;
-    overflow: hidden;
-}
-
-.image img{
-    cursor: pointer;
-}
-
-img#loison{
-    width:80%;
-    height: 200% ;
-    margin:0 auto;
-}
-
-img#ajax{
-    height: 250%;
-}
-img#gaumart{
-    height: 50%;
-    margin-top:5em;
-}
-img#husky{
-    height: 500%;
-}
-
-footer {
-    padding: 20px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #08D9D6;
-    text-align: center;
-}
-
-hr {
-    width: 100%;
-}
-
-
-/* Modal */
-
-.modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
-
-.modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
-
-/* Media Queries */
-
-/*@media(max-width:) {}*/
-
-@media(max-width: 860px) {
-    .container-flex,
-    header #titre,
-    header nav,
-    header nav li,
-    #boxes .box,
-    article#main-col,
-    aside#sidebar {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+    .dropdown-wombere{
         text-align: center;
-        width: 100%;
-
-    }
-
-    header nav li {
-        margin-bottom: 5px;
-    }
-
-    header {
-        padding-bottom: 10px;
-    }
-
-
-    /* Navbar */
-    header {
-        height: auto;
-    }
-    .nav-fix h1 {
-        padding-bottom: 10px;
-    }
-
-    .nav-top {
-        top: 0;
-        height: auto;
-
-    }
-
-    .nav-top h1 {
-        font-size: 1.5em;
-
-    }
-    .nav-up {
-        top: -100em;
-    }
-
-    #showcase {
-        padding-bottom: 10px;
-    }
-
-    #showcase h1 {
-        font-size:2.5em;
-        font-weight: bold;
-        margin-top: 5em;
     }
     
-    #showcase p {
-        font-size:1.2em;
-    }
+    .dropdown-toggle::after {
+    
+}
+   
+   
+}
 
-    legend {
-        margin: 0 auto;
-    }
-    img {
-        margin: 0 auto;
-    }
+    /*scrollbar fun */
+    .scroll-progress-container {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  top:48.5px;
+    left: -1em;
 
 }
+
+.scroll-progress {
+    
+  width: 0px;
+  height: 3.5px;
+  background-image: linear-gradient(to right, #FE0000 0, #FE0000 33.33%, #FED42A 33.33%,#FED42A 66.66%, #39D33A 66.66%, #39D33A 100%);
+}
+
+/* Fin navbar */
+
+
+
+
+/* Main Intro start */
+
+
+
+.header-accueil{
+    padding-top:4.38em;
+    padding-bottom:4.38em;
+    font-family: 'Roboto', cursive;
+    
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin-left:0px;
+    margin-right:0px;
+    background-image: url('../img/Parallax_main1bis%20-%20Copie-min.png');
+    min-height:650px;
+    position: relative;
+    
+}
+
+.main-intro{
+    
+    background-image: linear-gradient(to right, rgba(254, 0, 0, .8) 0, rgba(254, 0, 0, .8) 33.33%, rgba(254, 212, 42, .8) 33.33%,rgba(254, 212, 42, .8) 66.66%, rgba(57, 211, 58, .8) 66.66%, rgba(57, 211, 58, .8) 100%);    
+}
+
+
+
+.main-intro h2{
+    position: relative;
+    color:white;
+    font-size: 3em;
+    font-weight: bolder;
+    text-shadow: 1px 2px 1px rgba(150, 150, 152, 1);
+}
+
+.main-intro p{ 
+    color:white;
+    font-size:1.25rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(150, 150, 152, 1);
+}
+
+
+
+@media (max-width: 767px) and (min-width:576px){
+    .main-intro h2{
+    font-size:1.4rem
+}
+    
+    .main-intro p{
+        font-size: 1.1rem;       
+    }
+}
+
+@media (max-width:575px){
+      .main-intro h2{
+    font-size:1.2rem
+}
+   
+    
+    .main-intro p{
+        font-size:.8rem;
+        
+    }
+}
+
+/* Main Intro end */
+
+
+
+/* Projet mainpagesction start */
+
+.projet-mainpage{
+    
+}
+
+.projet-mainpage > .w-100{
+    background-color: lightgray;
+}
+
+.projet-mainpage > .w-100 h2{
+    
+}
+
+.projet-mainpage .card {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.projet-mainpage .card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+.projet-mainpage .card:hover img{
+  transform: scale(1.05);  
+}
+
+.projet-mainpage .img-card {
+  
+ max-height:220px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+
+@media (min-width: 1200px){
+.projet-mainpage .img-card {
+    height:220px;
+ 
+}
+}
+.projet-mainpage .img-card img{
+  
+  
+  transition: all .5s ease;
+} 
+.projet-mainpage .card-content {
+  padding:15px;
+  text-align:left;
+}
+.projet-mainpage .card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.projet-mainpage .card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.projet-mainpage .card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.projet-mainpage .card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+
+/* Projet mainpagesction end */
+
+
+
+
+
+/* Section onglet start */
+
+
+/*
+
+#news-image-one{
+    transform: scale(1.7)
+}
+
+#news-image-two{
+     transform: scale(1.2)
+}
+
+h2.retroshadow {
+  background-color:;
+  letter-spacing: .05em;
+  text-shadow: 2px 2px 0px #d5d5d5, 2px 2px 0px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+*/
+
+.news > .w-100{
+    background-color: lightgray;
+}
+
+.news > .w-100 img{
+    
+}
+
+#news-deco-one{
+    
+   
+    background: url(../img/african-instruments-background-music-158664.jpeg) no-repeat center fixed; 
+ background-size: cover;
+    
+}
+
+#news-deco-two{
+    
+    
+    background: url(../img/african-instruments-background-music-158664.jpeg) no-repeat center fixed; 
+ background-size: cover;
+    
+}
+
+.news .titre-news{
+    font-size:1.5rem;
+    font-weight: 700;
+    border-top:1px solid lightgray;
+}
+
+
+.news .titre-news{
+    font-size:1.5rem;
+    font-weight: 700;
+    border-top:1px solid lightgray;
+    margin-bottom:-2px;
+}
+
+.news small{ 
+    margin-bottom:10px;
+}
+
+
+/* Section onglet end */
+
+
+/* Section Presentation start */
+
+.partners {
+    background-color: rgba(155,155,155,.2)
+}
+
+.partners > .w-100{
+    background-color: lightgray;
+}
+
+.carousel{
+    min-height: 200px;
+}
+
+
+
+
+/* FOOTER start */
+
+.footer{
+   /* background-image: linear-gradient(to right, #FE0000 0, #FE0000 33.33%, #FED42A 33.33%,#FED42A 66.66%, #39D33A 66.66%, #39D33A 100%);*/
+    background-color: rgba(0,0,0,.9);
+    font-family:Roboto;
+    color:gainsboro;
+}
+
+/* FOOTER start */
+
+
+
+
+
+
+/*
+QUI SOMMES-NOUS
+.presentation .card{
+  border-radius: 0px;
+  border: none; 
+}
+
+.presentation .card-img {
+  text-align: center;
+  flex-shrink: 0; }
+
+@media (max-width: 767px) {
+    .presentation{
+        padding:50px 0;
+    }
+}*/
+/* Section Presentation end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* old card for news */
+
+
+/* old card new 
+.card-deck-custom >  div[class*='col-'] {
+  display: flex;
+  flex:1 0 auto;
+}
+
+.news .card{
+    font-family: Roboto;
+    font-size:1.1rem;
+    padding:0;
+}
+
+
+.news .card .card-header{
+    
+    background: yellow;
+    color:green;
+    
+}
+
+.news .card:nth-child(3n) .card-header{
+    background: #c00;
+    color:yellow
+}
+
+.news .card:nth-child(3n+1) .card-header{
+    background: #39D33A;
+    color:red;
+}
+
+
+.news .card{
+   /* background-image: linear-gradient(to right, #FE0000 0, #FE0000 33.33%, #FED42A 33.33%,#FED42A 66.66%, #39D33A 66.66%, #39D33A 100%) ;
+    border: 1px solid #F7F7F7, 
+    FOND DE LA CARTE
+}
+
+.news .card>img:hover{
+    cursor: zoom-in;
+}
+
+.news .card-header{
+    background-color:#F7F7F7;
+}
+
+
+.news .modal-content{
+    transform: scale(1.2);
+    margin-top:90px;
+}
+
+.news .modal-header{
+    border-bottom:.5px solid lightgrey;
+    
+}
+
+.news .modal-body>img{
+    transform:scale(1);
+}
+*/
+
+
+/* save html
+
+<test><div class="container py-5">
+          
+          <!--
+           <div class="row align-items-center my-3 mb-5" data-aos="zoom-out">
+              <div class="col-2"><img src="assets/img/drums-647220_640.jpg" alt="" class="img-fluid" id="news-image-one"></div>
+               <h2 class="col-8 mx-auto text-center retroshadow">Le coin des actualités</h2>
+               <div class="col-2"><img src="assets/img/flag-guinee.png" alt="" class="img-fluid" id="news-image-two"></div>
+           </div>-->
+            <div class="row text-center">
+               <div class="card-deck">
+                <div class="card card-inverse text-center col-md-4 mb-5" data-toggle="modal" data-target="#ref1">
+
+                   <div class="card-header">
+                       <p>Bientôt le Festival des Solidarités</p>
+                    </div>
+                   
+                    <!-- Image -->
+                    <img class="card-img-top img-fluid"  src="assets/img/Plaquette-festival.png" alt="News image">
+
+                    
+
+                    <!-- The modal -->
+                    <div class="modal fade" id="ref1" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                   <p class="mx-auto my-auto"> Bientôt le Festival des Solidarités</p>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid" class="zoom" alt="News image modal" src="assets/img/Plaquette-festival.png">
+                                </div>
+                                <a class="btn btn-primary" href="assets/img/Plaquette-festival.png" download>Telecharger l'image</a>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card card-inverse text-center col-md-4 mb-5" data-toggle="modal" data-target="#ref2">
+
+                   <div class="card-header">
+                        Trouver ici le programme
+                    </div>
+                    <!-- Image -->
+                    <img class="card-img my-auto" src="assets/img/Plaquette-festival-verso.png" alt="Photo of sunset">
+                    <!-- The modal -->
+                    <div class="modal fade" id="ref2" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header"><p class="mx-auto my-auto">Trouver ici le programme</p>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid" class="zoom" alt="News image modal" src="assets/img/Plaquette-festival-verso.png">
+                                </div>
+                                <a class="btn btn-primary" href="assets/img/Plaquette-festival-verso.png" download>Telecharger l'image</a>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="card card-inverse text-center col-md-4 mb-5 d-flex justify-content-between" data-toggle="modal" data-target="#ref3">
+
+                   <div class="card-header">
+                        Ce week-end ?! c'est weekend causette autour d'un pot.<br>
+                        Venez nombreux et partageons !
+                    </div>
+                    
+                    <!-- Image -->
+                    <img class="card-img my-auto" src="assets/img/Locaux%20Wombere.jpg" alt="Locaux Wombere">
+
+                    
+                    
+                    <!-- The modal -->
+                    <div class="modal fade" id="ref3" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                  <p class="mx-auto my-auto"> Ce week-end ?! c'est weekend causette autour d'un pot.<br>
+                        Venez nombreux et partageons !</p>
+                                   
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid" class="zoom" alt="News image modal" src="assets/img/Locaux%20Wombere.jpg">
+                                </div>
+                                <a class="btn btn-primary" href="assets/img/Locaux%20Wombere.jpg" download>Telecharger l'image</a>
+
+                                
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm-4 mb-5"> <div class="card card-inverse text-center " data-toggle="modal" data-target="#ref1">
+
+                   <div class="card-header">
+                       <p>Bientôt le Festival des Solidarités</p>
+                    </div>
+                   
+                    <!-- Image -->
+                    <img class="card-img-top img-fluid"  src="assets/img/Plaquette-festival.png" alt="News image">
+
+                    
+
+                    <!-- The modal -->
+                    <div class="modal fade" id="ref1" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                   <p class="mx-auto my-auto"> Bientôt le Festival des Solidarités</p>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid" class="zoom" alt="News image modal" src="assets/img/Plaquette-festival.png">
+                                </div>
+                                <a class="btn btn-primary" href="assets/img/Plaquette-festival.png" download>Telecharger l'image</a>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+               <div class="col-sm-4 mb-5"> <div class="card card-inverse text-center " data-toggle="modal" data-target="#ref2">
+
+                   <div class="card-header">
+                        Trouver ici le programme
+                    </div>
+                    <!-- Image -->
+                    <img class="card-img my-auto" src="assets/img/Plaquette-festival-verso.png" alt="Photo of sunset">
+                    <!-- The modal -->
+                    <div class="modal fade" id="ref2" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header"><p class="mx-auto my-auto">Trouver ici le programme</p>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid" class="zoom" alt="News image modal" src="assets/img/Plaquette-festival-verso.png">
+                                </div>
+                                <a class="btn btn-primary" href="assets/img/Plaquette-festival-verso.png" download>Telecharger l'image</a>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   </div></div>
+                
+                
+               <div class="col-sm-4 mb-5"> <div class="card card-inverse text-center  d-flex justify-content-between" data-toggle="modal" data-target="#ref3">
+
+                   <div class="card-header">
+                        Ce week-end ?! c'est weekend causette autour d'un pot.<br>
+                        Venez nombreux et partageons !
+                    </div>
+                    
+                    <!-- Image -->
+                    <img class="card-img my-auto" src="assets/img/Locaux%20Wombere.jpg" alt="Locaux Wombere">
+
+                    
+                    
+                    <!-- The modal -->
+                    <div class="modal fade" id="ref3" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                  <p class="mx-auto my-auto"> Ce week-end ?! c'est weekend causette autour d'un pot.<br>
+                        Venez nombreux et partageons !</p>
+                                   
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid" class="zoom" alt="News image modal" src="assets/img/Locaux%20Wombere.jpg">
+                                </div>
+                                <a class="btn btn-primary" href="assets/img/Locaux%20Wombere.jpg" download>Telecharger l'image</a>
+
+                                
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                   </div></div>
+        </div>
+        </div></test>
+
+*/
