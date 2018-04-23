@@ -36,7 +36,7 @@
         </div>
 
         <h1 id="slogan" class="col-6">
-            Wombere Association France Guinée
+            Wombere&nbsp;Association France&nbsp;Guinée
         </h1>
         
         <div class="col-2">
@@ -207,7 +207,7 @@
                                   </a>
                                 </h4>
                                 <p class="">
- La semaine de la solidarité internationale et au développement durable aura lieu du 12 au 20 novembre 2016. Des manifestations sont organisées partout en France. Elles permettent de sensibiliser le plus grand nombre aux questions de solidarité internationale. <br> Les membres du collectif des solidarités 81 pensent qu'il est important de sensibiliser les différents publics et donner une visibilité à ce temps fort qu'est la Semaine de la Solidarité Internationale.
+                                   La semaine de la solidarité internationale et au développement durable aura lieu du 12 au 20 novembre 2016. Des manifestations sont organisées partout en France. Elles permettent de sensibiliser le plus grand nombre aux questions de solidarité internationale. <br> Les membres du collectif des solidarités 81 pensent qu'il est important de sensibiliser les différents publics et donner une visibilité à ce temps fort qu'est la Semaine de la Solidarité Internationale.
                                 </p>
                             </div>
                             <div class="card-read-more">
@@ -521,8 +521,8 @@
 
     <!-- script perso start -->
     <script>
-        
-        $(document).ready(function(){     
+        //gestion du dropdown on mobile et pas en lg
+         
              
        if ($('nav').width() > 736 ){
             $('#dropdown01').prop('disabled',true);
@@ -534,12 +534,11 @@
        }
 
 
-        });
         
     </script>
     
     <script>
-    $(document).ready(function() {
+
 
   var toggleAffix = function(affixElement, scrollElement, wrapper) {
 
@@ -571,10 +570,11 @@
     toggleAffix(ele, $(window), wrapper);
   });
         
-});        
+       
     </script>
     
-    <script> $(document).ready(function() {function positionSidebar() {
+    <script> $(document).ready(function() {
+        function positionSidebar() {
     if ($('body').width() > 750) {
         $('nav').affix({});
     } else {
@@ -585,16 +585,17 @@
    
    
    <script type='text/javascript'>
-    $(document).ready(function() {
+    
          $('.carousel').carousel({
              interval: 4000
          })
-    });    
+       
 </script>
    
    
    
-   <script>  $(document).ready(function() {
+   <script>  
+       //navbar border fun
       var docHeight = $(document).height(),
       windowHeight = $(window).height(),
       scrollPercent;
@@ -604,7 +605,22 @@
 
         $('.scroll-progress').width(scrollPercent + '%');
         });
-        });</script>
+        </script>
+        
+        
+        <script>
+
+  $('.navbar-collapse').on('show.bs.collapse', function() {
+
+  $('body').css('overflow', 'hidden');
+});
+            
+            $('.navbar-collapse').on('hidden.bs.collapse', function() {
+
+  $('body').css('overflow', 'auto');
+});
+ 
+</script>
     <!-- script perso end -->
     
     

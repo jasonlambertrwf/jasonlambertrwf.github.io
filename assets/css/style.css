@@ -13,12 +13,30 @@ body{
     font-size:.8em !important;
 }
 
+@media (max-width:767.5px)
+{
+    .navbar{
+        position: relative !important;
+        margin-top: -120px;
+        
+    }
+}
+
+@media (max-width:530px)
+{
+    .navbar{position: relative !important;
+        margin-top:-80px;
+        
+        
+    }
+}
+
 .header-main > .row{
     margin:0;
 }
 
 .header-main #logo img{
-    width:50%;
+    width:80%;
 }
 
 .header-main #slogan{
