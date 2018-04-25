@@ -491,6 +491,10 @@
         </div>
     </div>
     </div>
+    
+    <!-- scroll back to top button -->
+    <a href="#" class="btt"><i class="fa fa-chevron-up"></i></a>
+    <!-- end of back to top button -->
 
     
     
@@ -533,7 +537,7 @@
         
     </script>
     
-    <script>
+    <script> // affix when LG
 
 
   var toggleAffix = function(affixElement, scrollElement, wrapper) {
@@ -564,20 +568,9 @@
 
     // init
     toggleAffix(ele, $(window), wrapper);
-  });
-        
-       
-    </script>
+  });    </script>
     
-    <script> $(document).ready(function() {
-        function positionSidebar() {
-    if ($('body').width() > 750) {
-        $('nav').affix({});
-    } else {
-        $('nav').removeAttr('data-toggle');
-    }
-            setInterval(positionSidebar, 300);
-}});</script>
+   
    
    
    <script type='text/javascript'>
@@ -590,8 +583,7 @@
    
    
    
-   <script>  
-       //navbar border fun
+   <script>     //navbar border fun
       var docHeight = $(document).height(),
       windowHeight = $(window).height(),
       scrollPercent;
@@ -617,6 +609,27 @@
 });
  
 </script>
+   
+   
+   
+     <script> // button bak to top
+        var scrolled = 400;
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > scrolled) {
+                $('a.btt').fadeIn('slow');
+            } else {
+                $('a.btt').fadeOut('slow');
+            }
+        });
+    </script>
+    <script>
+        $('a.btt').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1400);
+            return false;
+        });
+    </script>
     <!-- script perso end -->
     
     
