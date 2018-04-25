@@ -8,6 +8,26 @@ body{
 
 
 
+.header-main > .row{
+    margin:0;
+}
+
+.header-main #logo img{
+    width:60%;
+}
+
+.header-main #slogan{
+    font-size:2rem;
+}
+
+.header-main .col-2 a:nth-child(1) i{color:hsl(221,44%,41%);}
+.header-main .col-2 a:nth-child(1) i:hover{color:hsl(221,44%,46%);transform:translateY(-5%)}
+.header-main .col-2 a:nth-child(2){color:hsl(203,89%,53%);}
+.header-main .col-2 a:nth-child(2) i:hover{color:hsl(203,89%,58%);transform:translateY(-5%)}
+.header-main .col-2 a:nth-child(3){color:hsl(0,100%,50%);}
+.header-main .col-2 a:nth-child(3) i:hover{color:hsl(0,100%,67%);transform:translateY(-5%)}
+
+
 .navbar{
     z-index:9999;
     transition: all 0.3s ease-out;
@@ -33,18 +53,6 @@ body{
     }
 }
 /* gestion du responsive bugfixe */
-
-.header-main > .row{
-    margin:0;
-}
-
-.header-main #logo img{
-    width:60%;
-}
-
-.header-main #slogan{
-    font-size:2rem;
-}
 
 
 .affix {
