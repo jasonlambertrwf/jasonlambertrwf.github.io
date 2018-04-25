@@ -307,6 +307,12 @@ max-width: 80% !important;
  
 }
 }
+
+.projet-mainpage .img-card{
+   /* background-image: linear-gradient(to bottom right, rgba(0, 0, 255,.7) 0, rgba(0, 0, 255,.7) 33.33%, rgba(255,255,255, .7) 33.33%,rgba(255,255,255, .7) 66.66%, rgba(255,0,0, .7) 66.66%, rgba(255,0,0, .7) 100%); */
+    background-image: linear-gradient(to bottom right, rgba(254, 0, 0, .8) 0, rgba(254, 0, 0, .8) 33.33%, rgba(254, 212, 42, .8) 33.33%,rgba(254, 212, 42, .8) 66.66%, rgba(57, 211, 58, .8) 66.66%, rgba(57, 211, 58, .8) 100%);
+}
+
 .projet-mainpage .img-card img{
   
   
