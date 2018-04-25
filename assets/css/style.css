@@ -428,7 +428,38 @@ h2.retroshadow {
     color:gainsboro;
 }
 
-/* FOOTER start */
+
+/* scroll to top */
+a.btt {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  bottom: 30px;
+  background: #ebebeb;
+    border:.1px solid gray;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  
+    transition: transform 0.3s ease-in-out;
+}
+
+a.btt > i {
+  color: #191717;
+  position: relative;
+  height: 100%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a.btt:hover{
+  transform: translatey(-10%);
+}
+/* FOOTER end */
 
 
 
