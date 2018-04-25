@@ -431,7 +431,7 @@ h2.retroshadow {
 
 /* scroll to top */
 a.btt {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 999;
   width: 50px;
