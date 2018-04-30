@@ -12,7 +12,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
-    <!--<link rel="stylesheet" href="assets/css/bootstrap-reboot.css">-->
+    <!--<link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/animate.css">-->
 
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -29,17 +30,20 @@
         <!-- HEADER INCLUDE start -->
         <div class="header-main d-none d-md-block pt-3 pb-2">
        <div class="row justify-content-center align-items-center">
-        <div id="logo" class="col-3 ml-4">
+       <div class="col-1">
+       <img src="assets/img/moving-djembe.gif" alt="" class="img-fluid w-75 ">
+       </div>
+        <div id="logo" class="col-4 offset-3">
             <a href="http://www.wombere.com/" title="Wombere Association">
-                <img src="assets/img/Logo-Wombere.png" alt="Logo Wombere" class="img-fluid pl-3">
+                <img src="assets/img/soutenez-wombere.png" alt="Logo Wombere" class="img-fluid pl-3">
             </a>
         </div>
 
-        <h1 id="slogan" class="col-6">
-            Wombere&nbsp;Association France&nbsp;Guinée
+        <h1 id="slogan" class="">
+            <!--Wombere&nbsp;Association France&nbsp;Guinée-->
         </h1>
         
-        <div class="col-2">
+        <div class="social-logo col-2 offset-2">
             <a href=""><i class="fab fa-facebook-square fa-2x mr-2"></i></a>
             <a href=""><i class="fab fa-twitter-square fa-2x mr-2"></i></a>
             <a href=""><i class="fab fa-youtube-square fa-2x"></i></a>
@@ -61,7 +65,7 @@
            
             <a class="navbar-brand mx-auto d-block d-md-none col-9 text-center" href="#"><img class="img-fluid brand-logo" src="assets/img/Logo-Wombere.png" alt="Logo Wombere"></a>
     </div>
-           <div class="container">
+           <div class="container-fluid">
             <div class="collapse navbar-collapse justify-content-md-center " id="navbarsExample08">
                 <ul class="navbar-nav nav-fill w-100">
                     <li class="nav-item active">
@@ -93,7 +97,7 @@
 
                     <li class="nav-item dropdown" >
                         <a class="nav-link" href="#" id="dropdown02" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alsény solo Cherif</a>
-                        <div class="dropdown-menu text-center" aria-labelledby="dropdown02">
+                        <div class="dropdown-menu text-center dropdown-alseny" aria-labelledby="dropdown02">
                             <a class="dropdown-item" href="#">Album</a>
                             <a class="dropdown-item" href="#">Fölifö</a>
 
@@ -107,7 +111,7 @@
             </div>
             
             </div>
-               <div class="scroll-progress-container d-none d-lg-block">
+               <div class="scroll-progress-container d-none d-md-block">
                 <div class="scroll-progress"></div> </div>
         </nav>
            
@@ -131,7 +135,7 @@
           <div class="row">
            <div class="col-4 offset-2 main-intro py-4  text-center">
             <h2 class="">WOMBERE</h2>
-            <p>Association de solidarité France-Guinée</p>
+            <p>Association de solidarité entre la France et la Guinée</p>
             <!--<p>L'Association Wombéré agit en France et en Guinée à travers des actions solidaires et culturelles afin de créer du lien entre ces deux cultures.</p>-->
             </div>
         </div>
@@ -522,97 +526,141 @@
     <!-- script perso start -->
     <script>
         //gestion du dropdown on mobile et pas en lg
-         
-             
-       if ($('nav').width() > 736 ){
-            $('#dropdown01').prop('disabled',true);
-           $('#dropdown02').prop('disabled',true);
-}
-       else if($('nav').width() < 736 ){
-          $('#dropdown01').prop('disabled',false);
-           $('#dropdown02').prop('disabled',false);
-       }
 
 
+        if ($('nav').width() > 736) {
+            $('#dropdown01').prop('disabled', true);
+            $('#dropdown02').prop('disabled', true);
+        } else if ($('nav').width() < 736) {
+            $('#dropdown01').prop('disabled', false);
+            $('#dropdown02').prop('disabled', false);
+        }
         
-    </script>
-    
-    <script> // affix when LG
-
-
-  var toggleAffix = function(affixElement, scrollElement, wrapper) {
-
-    var height = affixElement.outerHeight(),
-        top = wrapper.offset().top;
-
-    if (scrollElement.scrollTop() >= top){
-        wrapper.height(height);
-        affixElement.addClass("affix");
-    }
-    else {
-        affixElement.removeClass("affix");
-        wrapper.height('auto');
-    }
-
-  };
-
-
-  $('[data-toggle="affix"]').each(function() {
-    var ele = $(this),
-        wrapper = $('<div></div>');
-
-    ele.before(wrapper);
-    $(window).on('scroll resize', function() {
-        toggleAffix(ele, $(this), wrapper);
-    });
-
-    // init
-    toggleAffix(ele, $(window), wrapper);
-  });    </script>
-    
-   
-   
-   
-   <script type='text/javascript'>
-    
-         $('.carousel').carousel({
-             interval: 4000
-         })
-       
-</script>
-   
-   
-   
-   <script>     //navbar border fun
-      var docHeight = $(document).height(),
-      windowHeight = $(window).height(),
-      scrollPercent;
-
-      $(window).scroll(function() {
-        scrollPercent = $(window).scrollTop() / (docHeight - windowHeight) * 101;
-
-        $('.scroll-progress').width(scrollPercent + '%');
+        $( window ).resize(function() {
+            if ($('nav').width() > 736) {
+            $('#dropdown01').prop('disabled', true);
+            $('#dropdown02').prop('disabled', true);
+        } else if ($('nav').width() < 736) {
+            $('#dropdown01').prop('disabled', false);
+            $('#dropdown02').prop('disabled', false);
+        }
         });
-        </script>
+    
+    </script>
+
+    <script>
+        // affix when LG
+
+
+        var toggleAffix = function(affixElement, scrollElement, wrapper) {
+
+            var height = affixElement.outerHeight(),
+                top = wrapper.offset().top;
+
+            if (scrollElement.scrollTop() >= top) {
+                wrapper.height(height);
+                affixElement.addClass("affix");
+            } else {
+                affixElement.removeClass("affix");
+                wrapper.height('auto');
+            }
+
+        };
+
+
+        $('[data-toggle="affix"]').each(function() {
+            var ele = $(this),
+                wrapper = $('<div class="hide-all"></div>');
+
+            ele.before(wrapper);
+            $(window).on('scroll resize', function() {
+                toggleAffix(ele, $(this), wrapper);
+            });
+
+            // init
+            toggleAffix(ele, $(window), wrapper);
+        });
+    </script>
+
+
+
+
+    <script type='text/javascript'>
+        $('.carousel').carousel({
+            interval: 4000
+        })
+    </script>
+
+
+    <script> // Masonry
+    (function() {
+ // Masonry grid setup
+ $('.grid').masonry({
+  itemSelector: '.grid__item',
+  columnWidth: '.grid__sizer',
+  gutter: 15,
+  percentPosition: true
+ });
+
+ // Image replacement handler
+ $(document).on('click', '.js-button', function() {
+  var imageSrc = $(this).parents('.grid__item').find('img').attr('src');
+
+  $('.js-download').attr('href', imageSrc);
+  $('.js-modal-image').attr('src', imageSrc);
+
+  $(document).on('click', '.js-heart', function() {
+   $(this).toggleClass('active');
+  });
+ });
+})();
+    </script>
+
+
+    <script>
+        //navbar border fun
+        var docHeight = $('body').height(),
+            windowHeight = $(window).height(),
+            scrollPercent;
+
+        $(window).scroll(function() {
+            scrollPercent = $(window).scrollTop() / (docHeight - windowHeight) * 101;
+
+            $('.scroll-progress').width(scrollPercent + '%');
+        });
         
         
-        <script>
+        
+        $( window ).resize(function() {
+        var docHeight = $('body').height(),
+            windowHeight = $(window).height(),
+            scrollPercent;
+            $(window).scroll(function() {
+            scrollPercent = $(window).scrollTop() / (docHeight - windowHeight) * 101;
 
-  $('.navbar-collapse').on('show.bs.collapse', function() {
+            $('.scroll-progress').width(scrollPercent + '%');
+        });
+        
+        });
+    </script>
 
-  $('body').css('overflow', 'hidden');
-});
-            
-            $('.navbar-collapse').on('hidden.bs.collapse', function() {
 
-  $('body').css('overflow', 'auto');
-});
- 
-</script>
-   
-   
-   
-     <script> // button bak to top
+    <script>
+      /*  $('.navbar-collapse').on('show.bs.collapse', function() {
+
+            $('body').css('overflow', 'hidden');
+        });
+
+        $('.navbar-collapse').on('hidden.bs.collapse', function() {
+
+            $('body').css('overflow', 'auto'); */
+        });
+    </script>
+
+
+
+    <script>
+        // button bak to top
         var scrolled = 400;
         $(window).scroll(function() {
             if ($(window).scrollTop() > scrolled) {
@@ -621,8 +669,7 @@
                 $('a.btt').fadeOut('slow');
             }
         });
-    </script>
-    <script>
+   
         $('a.btt').click(function() {
             $('html, body').animate({
                 scrollTop: 0
@@ -630,9 +677,14 @@
             return false;
         });
     </script>
+    
+    
+    
+
+
     <!-- script perso end -->
-    
-    
+
+
     <!-- script end -->
 </body>
 
