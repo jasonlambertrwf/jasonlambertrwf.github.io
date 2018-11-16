@@ -81,35 +81,52 @@
         .card{
             background-color: rgba(255,255,255,.85);
         }
-        /* logo social start */
+      
+        /* button back to top start */
+        
+        /* scroll to top */
 
-.fa-facebook-square,
-.fa-facebook-square {
-    color: white;
+
+@media (max-width: 767px) {
+.d-md-block-custom{
+    display:none !important;
+}   
 }
 
-.fa-facebook-square:hover,
-.fa-facebook-square:hover {
-    color: lightgrey;
-    transform: translateY(-2px) !important;
-
-
+@media (min-width: 768px) {
+.d-md-block-custom{
+    display:block;
+}   
 }
 
-.fa-twitter-square,
-.fa-twitter-square {
-    color: white;
+a.btt {
+
+    background: #ebebeb;
+    border-radius: 15px;
+    border: .1px solid gray;
+    bottom: 30px;
+    display: none;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    transition: transform 0.3s ease-in-out;
+    width: 50px;
+    z-index: 999;
 }
 
-.fa-twitter-square:hover,
-.fa-twitter-square:hover {
-    color: lightgrey;
-    transform: translateY(-2px) !important
+a.btt > i {
+    color: #191717;
+    height: 100%;
+    left: 50%;
+    position: relative;
+    top: 10px;
+    transform: translateX(-50%);
 }
 
-
-/* logo social end*/
-
+a.btt:hover {
+    transform: translatey(-10%);
+}
+        /* button back to top end */
     </style>
 </head>
 <body>
@@ -366,6 +383,9 @@
     </div>
     <!-- FOOTER end -->
     
+     <!-- scroll back to top button start-->
+    <a href="#" class="btt d-md-block-custom"><i class="fa fa-chevron-up"></i></a>
+    <!-- end of back to top button end -->
     
     <!-- JavaScript files start -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
@@ -402,6 +422,18 @@
                 easing: 'easeInOutCubic', // Easing pattern to use
                 offset:0,    
             });
+    </script>
+    
+    <script>
+        // button bak to top
+           var scrolled = 400;
+           $(window).scroll(function() {
+               if ($(window).scrollTop() > scrolled) {
+                   $('a.btt').fadeIn('slow');
+               } else {
+                   $('a.btt').fadeOut('slow');
+               }
+           });
     </script>
     
     <!-- JavaScript files end -->
