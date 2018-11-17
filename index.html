@@ -22,14 +22,28 @@
     
        body{
             /* background-color: rgb(248,249,250); */
+            /* background-color: rgb(5, 112, 119); */
            font-family: 'Mali', cursive;
         } 
         
-    @media (min-width: 576px) {
+    @media (max-width: 576px) {
+        html{
+            font-size: 1.75rem;
+            }
+        .pgwSlideshow .ps-current{
+            min-height:50px;
+        }
+    }
+        
+    @media (min-width: 577px) {
         html{
             font-size: 1.5rem;
             }
+        .pgwSlideshow .ps-current{
+            min-height:50px;
+        }
     }
+        
 
     @media (min-width: 768px) {
         html{
@@ -39,11 +53,20 @@
             padding-top: 10px;
         }
     }
+        
+     @media (max-width: 991px) {
+         .presentation-title{
+             margin-top: 1em;
+         }
+    }
 
     @media (min-width: 992px) {
         html{
             font-size: 1.2rem;
             }
+        .presentation-title{
+             margin-top: 0;
+         }
     }
 
     @media (min-width: 1200px) {
@@ -66,6 +89,10 @@
         
         .blockquote-footer::after {
 	        content: "\2014 \00A0";
+        }
+        
+        .pgwSlideshow ul{
+            padding:0;
         }
         
         .bgc-pinceau{
@@ -263,7 +290,7 @@ a.btt:hover {
             </div>
             <div class="col-lg-7 d-flex flex-column justify-content-center px-5">
                 <!-- <p class="mb-5 font-weight-bold font-italic">Ma Philosophie</p> -->
-                <h2 class="mb-5">Ma Philosophie</h2>
+                <h2 class="presentation-title mb-5">Ma Philosophie</h2>
                 <p>Lorsque j'ai eu 18 ans, j'ai cassé ma tirelire pour m'acheter un tableau, un vrai. J'aimais déjà la création originale et je faisais bien la différence avec une simple reproduction.</p><p>Après des études d'histoire de l'art et 15 ans de cours de peinture, j'ai enfin osé montrer mes tableaux aux autres. Ma première exposition fut un succès d'estime qui m'encouragea cependant à continuer de peindre. Mes amis, puis les amis de mes amis, ont acquis certaines de mes toiles... à "prix d'amis". <br> Et j'ai décidé de garder des prix très abordables afin que chaque amateur puisse, lui aussi, accrocher sur ses murs, un tableau, un vrai ! <br><br> Allez dans la rubrique "tarifs" et vous constaterez que toutes mes oeuvres sont très abordables. J'ai beaucoup de plaisir à les créer et je souhaite que le plus grand nombre d'entre vous ait beaucoup de plaisir à en profiter.
                 </p>
             </div>
