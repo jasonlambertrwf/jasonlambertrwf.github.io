@@ -18,6 +18,10 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Crafty+Girls|Linden+Hill|Noto+sans|Roboto|Mali" rel="stylesheet"> 
     
+    <!-- AOS CSS - Scroll use -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css" />
+    
+    
     <style>
     
        body{
@@ -26,24 +30,28 @@
            font-family: 'Mali', cursive;
         } 
         
-    @media (max-width: 576px) {
+     @media (max-width: 991px) {
+         .presentation-title{
+             margin-top: 1em;
+         }
+         .ps-current{
+            min-height: 20rem !important;
+        }
+    }
+        
+        
+        
+     @media (max-width: 576px) {
         html{
             font-size: 1.75rem;
             }
         .pgwSlideshow .ps-current{
             min-height:50px;
         }
+         
     }
         
-    @media (min-width: 577px) {
-        html{
-            font-size: 1.5rem;
-            }
-        .pgwSlideshow .ps-current{
-            min-height:50px;
-        }
-    }
-        
+   
 
     @media (min-width: 768px) {
         html{
@@ -54,11 +62,6 @@
         }
     }
         
-     @media (max-width: 991px) {
-         .presentation-title{
-             margin-top: 1em;
-         }
-    }
 
     @media (min-width: 992px) {
         html{
@@ -67,6 +70,9 @@
         .presentation-title{
              margin-top: 0;
          }
+        .ps-current{
+            min-height: 31.25rem !important;
+        }
     }
 
     @media (min-width: 1200px) {
@@ -75,6 +81,32 @@
             }
     }
 
+        /* GESTION HEADER + PARALAX start */
+        .container-padding{
+            padding-left:0 !important; /* container-fluid full width fix*/
+            padding-right:0 !important; /* container-fluid full width fix*/
+        }
+        
+        .container-padding .row{
+            margin-left:0 !important; /* container-fluid full width fix*/
+            margin-right:0 !important; /* container-fluid full width fix*/
+        }
+        
+        .container-padding .row .col-12{
+            padding-left:0 !important; /* container-fluid full width fix*/
+            padding-right:0 !important; /* container-fluid full width fix*/
+        }
+        
+        .h-90{
+            height:90%;
+        }
+        
+        .h-10{
+            height:10%;
+        }
+        
+        /* GESTION HEADER + PARALAX end */
+        
         
         h1{
             /*font-family: 'Crafty Girls', cursive;*/
@@ -115,6 +147,118 @@
         .text-footer{
             font-size:.7em;
         }
+        
+        /* button animation - user-go-down=>scroll paralax button start */
+        .chevron {
+  position: absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  width: 2.1rem;
+  height: 0.48rem;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-animation: move-chevron 3s ease-out infinite;
+          animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  -webkit-animation: move-chevron 3s ease-out 1s infinite;
+          animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  -webkit-animation: move-chevron 3s ease-out 2s infinite;
+          animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: '';
+  position: absolute;
+  top:-2em;
+  height: 100%;
+  width: 50%;
+  background: #2c3e50;
+}
+
+.chevron:before {
+  left: 0;
+  -webkit-transform: skewY(30deg);
+          transform: skewY(30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  -webkit-transform: skewY(-30deg);
+          transform: skewY(-30deg);
+}
+
+@-webkit-keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: translateY(2.28rem);
+            transform: translateY(2.28rem);
+  }
+  66.6% {
+    opacity: 1;
+    -webkit-transform: translateY(3.12rem);
+            transform: translateY(3.12rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(4.8rem) scale(0.5);
+            transform: translateY(4.8rem) scale(0.5);
+  }
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: translateY(2.28rem);
+            transform: translateY(2.28rem);
+  }
+  66.6% {
+    opacity: 1;
+    -webkit-transform: translateY(3.12rem);
+            transform: translateY(3.12rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(4.8rem) scale(0.5);
+            transform: translateY(4.8rem) scale(0.5);
+  }
+}
+
+        /* button scroll paralax end */
+        
+         /* reponsive aspect of sliderJS -- modify pgwslideshow.js start */
+        .ps-current{
+            margin-top:auto;
+            margin-bottom: auto;
+        }
+        
+        .pgwSlideshow .ps-current > ul  > li{
+            position: absolute !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* compatibilité : ie9+ */
+        }
+        
+        .ps-prev, .ps-next{
+            z-index:9999;
+        }
+        
+        /* reponsive aspect of sliderJS end */
+        
         /* button back to top start */
         
 @media (max-width: 767px) {
@@ -157,21 +301,22 @@ a.btt:hover {
     transform: translatey(-10%);
 }
         /* button back to top end */
+        
     </style>
 </head>
 <body>
     
        
     <!-- HEADER start -->
-       <div id="accueil" class="container-fluid">
+       <div id="accueil" class="container-fluid container-padding">
         <div class="row">
            <!-- Banniere -->
             <div class="col-12 mt-4 mb-2">
                <div class="row text-center justify-content-center">
-                <h1 class="text-uppercase mb-4">
+                <h1 class="text-uppercase mb-4" data-aos="slide-down" data-aos-once="true">
                     tablo-deco
                 </h1>
-                <p class="position-absolute blockquote-footer align-self-end">Les toiles de Caty Rocheteau </p>
+                <p class="position-absolute blockquote-footer align-self-end" data-aos="slide-down" data-aos-once="true">Les toiles de Caty Rocheteau </p>
                 </div>
             </div>
             <!-- Navbar -->
@@ -196,12 +341,42 @@ a.btt:hover {
     </div>
         
         <!-- HEADER end -->
+        
+        
+        <!-- TEST TABLEAU FOND start -->
+    <div class="container-fluid container-padding">
+        <div class="w-100" style="height: 30em; background:url(assets/img/nouveau-tableau/20180809_202354.png) no-repeat top center fixed; background-size: cover ">
+            <div class="row h-100">
+                <div class="col-7 offset-1 col-md-4 offset-md-2 h-100" style="background-color: rgba(255,255,255,.8)">
+                    <div class="row text-center justify-content-center align-items-center h-90 mx-auto">
+                        <div>
+                            <p class="h4">
+                                <b>Bonjour et Bienvenue sur mon site !</b>
+                            </p>
+                            <p class="w-75 mx-auto mt-5">Retrouvez ici toutes mes oeuvres réalisées dans mon atelier personnel.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#mes-toiles" class="w-100 pt-5">
+                        <div class="h-10 w-50">
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     
+        
+        <!-- TEST TABLEAU FOND end -->
+    
+        
     <!-- MES TABLEAUX start -->
     <div class="container-fluid my-5">
     <div class="row">
     <div class="col-12 text-center mb-3">
-        <p class="h4 mb-5"><b>Bonjour et Bienvenue sur mon site !</b></p>
             <div id="mes-toiles" class="d-flex justify-content-center pt-3">
                 <img src="assets/img/left-arrow.png" alt="" class="arrows img-fluid align-self-end">
                 <p>Découvrez mes tableaux en les faisant défiler</p>
@@ -210,7 +385,7 @@ a.btt:hover {
     </div>
     <ul class="pgwSlideshow">
         <li><img src="assets/img/tableaux/image-05.jpg" alt="" data-src-large="assets/img/tableaux/image-05-tiny.jpg" data-description="" class="img-fluid"></li>
-        <li><img src="assets/img/tableaux/image-06.jpg" alt="" data-src-large="assets/img/tableaux/image-06-tiny.jpg" data-description="" class="img-fluid"></li>
+        <li><img src="assets/img/tableaux/image-21.jpg" alt="" data-src-large="assets/img/tableaux/image-21-tiny.jpg" data-description="" class="img-fluid"></li>
         <li><img src="assets/img/tableaux/image-07.jpg" alt="" data-src-large="assets/img/tableaux/image-07-tiny.jpg" data-description="" class="img-fluid"></li>
         <li><img src="assets/img/tableaux/image-08.png" alt="" data-src-large="assets/img/tableaux/image-08-tiny.png" data-description="" class="img-fluid"></li>
         <li><img src="assets/img/tableaux/image-09.png" alt="" data-src-large="assets/img/tableaux/image-09-tiny.png" data-description="" class="img-fluid"></li>
@@ -284,7 +459,7 @@ a.btt:hover {
             <div class="col-12 col-lg-5 text-center my-auto">
                 <div class="row">
                        <div class="col-12 p-0">
-                        <img id="img-presentation" class="img-fluid" src="assets/img/caty.png" alt="Portrait de Caty Rocheateau à Vertou ...">
+                        <img id="img-presentation" class="img-fluid" src="assets/img/caty.png" alt="Portrait de Caty Rocheateau à Vertou ..." title="Caty Rocheteau présentant une de ses peintures">
                         </div>
                 </div>
             </div>
@@ -420,7 +595,7 @@ a.btt:hover {
     <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
     <script src="assets/js/bootstrap.js"></script> 
     
-    <!-- sliderJs -->
+    <!-- sliderJs - "Mes toiles" -->
     <script src="assets/sliderJs/pgwslideshow.js"></script> 
     <script>
         $(document).ready(function() {
@@ -428,7 +603,7 @@ a.btt:hover {
 });
     </script>
     
-    <!-- sliderCss -->
+    <!-- sliderCss - "Mes Projets Recents" -->
     <script src="assets/sliderCss/sampgallery.js">
     </script>
     <script>
@@ -464,6 +639,18 @@ a.btt:hover {
                }
            });
     </script>
+    
+    
+    <!-- AOS init -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js">
+    </script>
+      <script>
+    AOS.init({
+      disable: 'mobile',
+        offset: 0,
+        duration:750
+    });
+  </script>
     
     <!-- JavaScript files end -->
 </body>
