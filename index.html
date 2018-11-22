@@ -23,6 +23,12 @@
     
     
     <style>
+        
+        /* A ENELEVERRRR */
+        .white-text{
+            color:white !important;
+        }
+        /* A ENELEVERRRR */
     
        body{
             /* background-color: rgb(248,249,250); */
@@ -300,6 +306,8 @@ a.btt > i {
 a.btt:hover {
     transform: translatey(-10%);
 }
+        
+        
         /* button back to top end */
         
     </style>
@@ -474,7 +482,7 @@ a.btt:hover {
        
     <!-- PRESENTATION start -->
     <div class="container-fluid">
-        <div class="row mt-5 bg-light">
+        <div id="prout" class="row mt-5 bg-light">
             <div class="col-12 col-lg-5 text-center my-auto">
                 <div class="row">
                        <div class="col-12 p-0">
@@ -482,7 +490,7 @@ a.btt:hover {
                         </div>
                 </div>
             </div>
-            <div class="col-lg-7 d-flex flex-column justify-content-center px-5">
+            <div class="col-lg-7 d-flex flex-column justify-content-center px-5 ">
                 <!-- <p class="mb-5 font-weight-bold font-italic">Ma Philosophie</p> -->
                 <h2 class="presentation-title mb-5">Ma Philosophie</h2>
                 <p>Lorsque j'ai eu 18 ans, j'ai cassé ma tirelire pour m'acheter un tableau, un vrai. J'aimais déjà la création originale et je faisais bien la différence avec une simple reproduction.</p><p>Après des études d'histoire de l'art et 15 ans de cours de peinture, j'ai enfin osé montrer mes tableaux aux autres. Ma première exposition fut un succès d'estime qui m'encouragea cependant à continuer de peindre. Mes amis, puis les amis de mes amis, ont acquis certaines de mes toiles... à "prix d'amis". <br> Et j'ai décidé de garder des prix très abordables afin que chaque amateur puisse, lui aussi, accrocher sur ses murs, un tableau, un vrai ! <br><br> Allez dans la rubrique "tarifs" et vous constaterez que toutes mes oeuvres sont très abordables. J'ai beaucoup de plaisir à les créer et je souhaite que le plus grand nombre d'entre vous ait beaucoup de plaisir à en profiter.
@@ -671,6 +679,42 @@ a.btt:hover {
     });
   </script>
     
+        
     <!-- JavaScript files end -->
+    
+    
+    <!-- BUTTON CHANGE DESIGN FOR TEST start -->
+        
+        <!--Test colorpicker start -->
+        <div class="colorpicker" style="position:fixed;top:0;left:0"> 
+           <div class="btn btn-sm btn-info">      
+            <label for="bg">Choisir une couleur:</label> 
+            <input id="bg" type="color" />  
+            </div>  
+            <br>
+            <button id="text-color" type="button" class="btn btn-warning">Changer la couleur de la police</button>
+        </div>
+       <!--Test colorpicker end-->
+       
+       <!--Test colorpicker -->
+        <script>
+            $(document).ready(function(){
+                $("#bg").change(function(){
+                    $('body').css("background-color",$("#bg").val());
+                    $('#presentation').css("background-color",$("#bg").val());
+                    $('#contact').css("background-color",$("#bg").val());
+                    $('#sous-titre').css("background-color",$("#bg").val());
+                    $('.navbar').css("background-color",$("#bg").val());
+                    $('#prout').removeClass("bg-light").css("background-color",$("#bg").val());
+    });
+               $("#text-color").click(function(){
+                   $('body').toggleClass("white-text");
+                   $('.h-90').css("color","black");
+               }); 
+});
+        </script>
+        
+    
+    <!-- BUTTON CHANGE DESIGN FOR TEST end -->
 </body>
 </html>
